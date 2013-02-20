@@ -1,0 +1,22 @@
+alias fp='cd ~/Documents/htdocs/'
+alias DDP='cd ~/Documents/htdocs/DDP/'
+alias ','='nohup nautilus . > /dev/null &'
+alias 'aa'='vim ~/.aliases && . ~/.aliases'
+alias sf='ssh forsvunnet@blade01.drivdigital.no'
+alias sd='ssh dd@blade01.drivdigital.no'
+alias tpb='nohup x-www-browser http://www.thepiratebay.se/browse > /dev/null &'
+alias vhost='sudo python ~/Programs/vhost.py'
+alias hosts='sudo vim /etc/hosts'
+alias xg='xgamma -g .6'
+alias cw='compass watch'
+alias cwn='nohup compass watch > /dev/null &'
+alias clip='xclip -sel clip <'
+evh () {
+	if [ -f "/etc/apache2/sites-available/$1" ]
+	then
+		vim "/etc/apache2/sites-available/$1" &&_
+		sudo service apache2 reload
+	else
+		echo "No such file: /etc/apache2/sites-available/$1"
+	fi
+}
