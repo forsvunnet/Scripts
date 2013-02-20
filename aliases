@@ -11,6 +11,7 @@ alias xg='xgamma -g .6'
 alias cw='compass watch'
 alias cwn='nohup compass watch > /dev/null &'
 alias clip='xclip -sel clip <'
+alias githubrepo='~/Programs/Scripts/githubrepo.sh'
 evh () {
 	if [ -f "/etc/apache2/sites-available/$1" ]
 	then
