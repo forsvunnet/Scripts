@@ -45,12 +45,13 @@ if lan != '0':
     i = 0
     while i <= 255:
         tip = lan + str(i)
-        if (tip == ip):
+        if (tip != ip):
             try:
                 response = urllib2.urlopen('http://' + tip + ':3391', None, 0.1).read()
-                print 'RFF: ' + response
+                print 'Scan result: ' + response
             except urllib2.URLError:
-                print "Could not connect to " + tip
+                0
+                #print "Could not connect to " + tip
         i += 1
 else:
     print 'lan ip not found'

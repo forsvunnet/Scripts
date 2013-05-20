@@ -1,9 +1,10 @@
 alias fp='cd ~/Documents/htdocs/'
+alias sql='mysql -u root -proot'
 alias DDP='cd ~/Documents/htdocs/DDP/'
 alias ','='nohup nautilus . > /dev/null &'
 alias 'aa'='vim ~/.aliases && . ~/.aliases'
 alias sf='ssh forsvunnet@blade01.drivdigital.no'
-alias sd='ssh dd@blade01.drivdigital.no'
+alias sd='ssh eivin@blade01.drivdigital.no'
 alias tpb='nohup x-www-browser http://www.thepiratebay.se/browse > /dev/null &'
 alias vhost='sudo python ~/Programs/Scripts/vhost.py'
 alias hosts='sudo vim /etc/hosts'
@@ -12,6 +13,8 @@ alias cw='compass watch'
 alias cwn='nohup compass watch > /dev/null &'
 alias clip='xclip -sel clip <'
 alias githubrepo='~/Programs/Scripts/githubrepo.sh'
+alias driv='sudo python ~/Programs/DrivServer/driv.py'
+alias irsync='bash ~/Programs/Scripts/inotify-rsync.sh'
 evh () {
 	if [ -f "/etc/apache2/sites-available/$1" ]
 	then
@@ -21,3 +24,4 @@ evh () {
 		echo "No such file: /etc/apache2/sites-available/$1"
 	fi
 }
+alias gac='ga -A && gc -m'
